@@ -1,6 +1,9 @@
-
+body{
+    --font-ubuntu : 'Ubuntu', sans-serif;
+}
 
 .main {
+    font-family: var(--font-ubuntu);
     margin : 0 auto;
     display : flex;
     direction: column;
@@ -10,7 +13,7 @@
 .container {
     margin : 0 auto;
     width : 80vw;
-    height: 40vh;
+    height: 50vh;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -18,14 +21,22 @@
 }
 
 .flexInputs{
-    margin-top: 5%;
+    margin: 3% auto;
+    width : 600px;
 }
+
+#form1 {
+    margin: 0 auto;
+}
+
+
 
 #box1, #box2, #box3 {
     margin : 0 1%;
     text-align: center;
     font-weight: bold;
     color: white;
+    margin :1%;
  
 }
 #box1{
@@ -38,6 +49,7 @@
 #box2{
     background-color: blueviolet;
     width : 50px;
+    
     flex : 1;
     /* flex : 5; */
     /* flex-grow : 2; */
@@ -60,9 +72,17 @@ input {
 button {
     background-color: blueviolet;
     color : white;
-    border : none
+    border : none;
+    margin-top : 1%;
+    padding:3%;
 }
 
 button:hover {
     background-color: black;
+}
+h2 {
+    /* font-size : 1.5rem; */
+    display : inline;
+    margin-right: 1%;
+
 }

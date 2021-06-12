@@ -10,6 +10,7 @@ const box1__flexbasis = document.getElementsByClassName('box1__flexbasis')
 const box2__flexbasis = document.getElementsByClassName('box2__flexbasis')
 const box3__flexbasis = document.getElementsByClassName('box3__flexbasis')
 
+const container = document.getElementById('container')
 const form__form1 = document.getElementById('form1')
 
 getInputValue = ()=> {
@@ -28,7 +29,7 @@ getInputValue = ()=> {
 form__form1.addEventListener('change', ()=>getInputValue())
 
 changeDisplay =()=> {
-  
+    container.style.flexDirection = 'column'
 }
 
 function reportwidth() {
