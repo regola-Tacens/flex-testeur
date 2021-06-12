@@ -27,6 +27,9 @@ getInputValue = ()=> {
 
 form__form1.addEventListener('change', ()=>getInputValue())
 
+changeDisplay =()=> {
+  
+}
 
 function reportwidth() {
     
