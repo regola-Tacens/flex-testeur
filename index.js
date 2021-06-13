@@ -13,6 +13,7 @@ const box3__flexbasis = document.getElementsByClassName('box3__flexbasis')
 const container = document.getElementById('container')
 const form__form1 = document.getElementById('form1')
 
+
 getInputValue = ()=> {
     firstBlock.style.flexGrow= box1__input[0].value
     firstBlock.style.flexBasis = box1__flexbasis[0].value +'px'
@@ -34,31 +35,42 @@ changeDisplay =()=> {
 
 function reportwidth() {
     
+    // box1_flexGrow = box1__input[0].value
     firstBlock.innerHTML = `<div>
-    width (px) : ${firstBlock.clientWidth} px <br><br>
-    flex-basis (px) :${box1__flexbasis[0].value}<br>
-    flex-grow : ${box1__input[0].value}
+    <div style="font-size:30px;"><strong>BOX 1</div></strong><br>
+    width : ${firstBlock.clientWidth} px <br><br>
+    flex-grow : ${box1__input[0].value || 1 }<br>
+    flex-shrink : ${ 1 }<br>
+    flex-basis : ${box1__flexbasis[0].value || 0}px<br><br>
+    <b>shorthand</b><br>
+    flex : ${box1__input[0].value || 1 } 1 ${box1__flexbasis[0].value || 0}px
     </div>` ;
 
     secondBlock.innerHTML = `<div>
-    width (px) : ${secondBlock.clientWidth} px <br><br>
-    flex-basis (px) :${box2__flexbasis[0].value}<br>
-    flex-grow : ${box2__input[0].value}
+    <div style="font-size:30px;"><strong>BOX 2</div></strong><br>
+    width : ${secondBlock.clientWidth} px <br><br>
+    flex-grow : ${box2__input[0].value || 1 }<br>
+    flex-shrink : ${ 1 }<br>
+    flex-basis : ${box2__flexbasis[0].value || 0} px<br><br>
+    <b>shorthand</b><br>
+    flex : ${box2__input[0].value || 1 } 1 ${box2__flexbasis[0].value || 0}px
     </div>` ;
 
     thirdBlock.innerHTML = `<div>
-    width (px) : ${thirdBlock.clientWidth} px <br><br>
-    flex-basis (px) :${box3__flexbasis[0].value}<br>
-    flex-grow : ${box3__input[0].value}
+    <div style="font-size:30px;"><strong>BOX 3</div></strong><br>
+    width : ${thirdBlock.clientWidth} px <br><br>
+    flex-grow : ${box3__input[0].value || 1 }<br>
+    flex-shrink : ${ 1 }<br>
+    flex-basis : ${box3__flexbasis[0].value || 0} px<br><br>
+    <b>shorthand</b><br>
+    flex : ${box3__input[0].value || 1 } 1 ${box3__flexbasis[0].value || 0}px
     </div>` ;
     
-    // secondBlock.innerHTML = 'width : '+ secondBlock.clientWidth +'px';
-    // thirdBlock.innerHTML = 'width : '+ thirdBlock.clientWidth +'px';
 
-   
   }
 
 
 window.onresize = reportwidth;
-
-// console.log (firstBlock.clientWidth)
+window.onload = ()=> {
+    reportwidth();
+}
