@@ -71,15 +71,16 @@ input {
 
 
 button {
-    background-color: blueviolet;
+    background-color: #023047;
     color : white;
     border : none;
-    margin-top : 1%;
+    margin-top : 3%;
     padding:3%;
 }
 
 button:hover {
-    background-color: #023047;
+    background: linear-gradient(140deg, #e7512b, #f4a261);
+    border : 1px solid #023047
 }
 h2 {
     /* font-size : 1.5rem; */

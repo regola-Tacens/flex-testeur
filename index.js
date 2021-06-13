@@ -40,6 +40,8 @@ changeDisplay =()=> {
     container.style.flexDirection = 'column'
 }
 
+reloadPage = () => window.location.reload();
+
 function reportwidth() {
 
 
