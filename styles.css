@@ -1,5 +1,6 @@
 body{
     --font-ubuntu : 'Ubuntu', sans-serif;
+    background-color: #fefae0;
 }
 
 .main {
@@ -11,17 +12,17 @@ body{
     justify-content: center;
 }
 .container {
-    margin : 0 auto;
+    margin : 3% auto;
     width : 80vw;
     height: 40vh;
-    background-color: black;
+    background-color: #023047;
     display: flex;
     justify-content: center;
     padding : 3%;
 }
 
 .flexInputs{
-    margin: 3% auto;
+    margin: 1% auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,31 +56,13 @@ body{
     align-items: center;
     letter-spacing: 0.05em;
     font-size : 14px;
+    background-color: blueviolet;
+    background: linear-gradient(140deg, #e7512b, #f4a261);
+    width : 50px;
+    flex : 1;
  
 }
-#box1{
-    background-color: blueviolet;
-    width : 50px;
-    flex : 1;
-    /* flex-grow : 2; */
-}
 
-#box2{
-    background-color: blueviolet;
-    width : 50px;
-    
-    flex : 1;
-    /* flex : 5; */
-    /* flex-grow : 2; */
-    /* flex-basis: 500px; */
-}
-
-#box3{
-    background-color: blueviolet;
-    width : 50px;
-    flex : 1;
-    /* flex : 1; */
-}
 
 input {
     width : 40px;
@@ -96,7 +79,7 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: #023047;
 }
 h2 {
     /* font-size : 1.5rem; */
