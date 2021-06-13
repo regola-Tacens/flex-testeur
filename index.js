@@ -52,7 +52,7 @@ function reportwidth() {
     flex-shrink : ${box1__flexshrink[0].value || 1 }<br>
     flex-basis : ${box1__flexbasis[0].value || 0}px<br><br>
     <b>shorthand</b><br>
-    flex : ${box1__input[0].value || 1 } ${box3__flexshrink[0].value || 1 } ${box1__flexbasis[0].value || 0}px
+    flex : ${box1__input[0].value || 1 } ${box1__flexshrink[0].value || 1 } ${box1__flexbasis[0].value || 0}px
     </div>` ;
 
     box2.innerHTML = `<div>
@@ -62,7 +62,7 @@ function reportwidth() {
     flex-shrink : ${box2__flexshrink[0].value || 1 }<br>
     flex-basis : ${box2__flexbasis[0].value || 0} px<br><br>
     <b>shorthand</b><br>
-    flex : ${box2__input[0].value || 1 } ${box3__flexshrink[0].value || 1 } ${box2__flexbasis[0].value || 0}px
+    flex : ${box2__input[0].value || 1 } ${box2__flexshrink[0].value || 1 } ${box2__flexbasis[0].value || 0}px
     </div>` ;
 
     box3.innerHTML = `<div>
