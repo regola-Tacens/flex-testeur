@@ -1,6 +1,18 @@
 var element = document.getElementById('container');
 
-element.addEventListener('mousedown', initResize, false);
+
+var resizer = document.createElement('div');
+resizer.style.width = '15px';
+resizer.style.height = '15px';
+resizer.style.background = '#e7512b';
+resizer.style.position = 'absolute';
+resizer.style.right = 0;
+resizer.style.bottom = 0;
+resizer.style.cursor = 'se-resize';
+
+//Append Child to Element
+resizer.addEventListener('mousedown', initResize, false);
+element.appendChild(resizer);
 
 //Window funtion mousemove & mouseup
 function initResize(e) {

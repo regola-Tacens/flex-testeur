@@ -13,40 +13,40 @@
 </head>
 <body>
     <main class="main" id="main">
-        <div class="container" id="container">
-            <div id="box1"> </div> 
+        <div class="container disable-select" id="container">
+            <div id="box1" > </div> 
             <div id="box2"></div>
             <div id="box3"></div>
         </div>
         <div class="flexInputs">
-            <div class="resizer"> redimensionnes cette boite bleu pour voir l'effet flex </div>
-            <form id="form1">
+            <div class="resizer"> Clic & Drag sur carre orange en bas à droite de la boite bleu pour redimensionner </div>
+            <form id="form1" >
                 <h2>BOX 1</h2>
                     <label for="flexWidth">flexGrow :</label>
-                    <input type="number" min="0" name="flexWidth" class="box1__input" >
+                    <input type="number" min="0" name="flexWidth" class="box1__input" value="1"  >
                     <!-- <button id="box1__upArrow" onClick="flexGrowIncrease(box1); return false;" class="buttonArrow">+</button>
                     <button id="box1__downArrow" onClick="flexGrowDecrease(box1); return false;" class="buttonArrow">-</button> -->
                     <label for="flexShrink">flexShrink :</label>
 
-                    <input type="number" min="0" name="flexShrink" class="box1__flexshrink" >
+                    <input type="number" min="0" name="flexShrink" class="box1__flexshrink" value="1" >
                     <label for="flexbasis">flex-basis :</label>
-                    <input type="number" min="0" name="flexbasis" class="box1__flexbasis">
+                    <input type="number" min="0" name="flexbasis" class="box1__flexbasis" value="0">
                 <br>
                 <h2>BOX 2</h2>
                     <label for="flexWidth">flexGrow :</label>
-                    <input type="number" min="0" name="flexWidth" class="box2__input" >
+                    <input type="number" min="0" name="flexWidth" class="box2__input" value="1" >
                     <label for="flexShrink">flexShrink :</label>
-                    <input type="number" min="0" name="flexShrink" class="box2__flexshrink" >
+                    <input type="number" min="0" name="flexShrink" class="box2__flexshrink" value="1" >
                     <label for="flexbasis">flex-basis :</label>
-                    <input type="number" min="0" name="flexbasis" class="box2__flexbasis">
+                    <input type="number" min="0" name="flexbasis" class="box2__flexbasis" value="0">
                 <br>
                 <h2>BOX 3</h2>
                     <label for="flexWidth">flexGrow :</label>
-                    <input type="number" min="0" name="flexWidth" class="box3__input" >
+                    <input type="number" min="0" name="flexWidth" class="box3__input" value="1" >
                     <label for="flexShrink">flexShrink :</label>
-                    <input type="number" min="0" name="flexShrink" class="box3__flexshrink" >
+                    <input type="number" min="0" name="flexShrink" class="box3__flexshrink" value="1">
                     <label for="flexbasis">flex-basis :</label>
-                    <input type="number" min="0" name="flexbasis" class="box3__flexbasis">
+                    <input type="number" min="0" name="flexbasis" class="box3__flexbasis" value="0">
             </form>
             
             <!-- <div class="Definition__flexgrow">  <h1>La propriété flex-grow</h1>

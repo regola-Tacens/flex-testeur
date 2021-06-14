@@ -14,20 +14,18 @@ body{
 .container {
     margin : 3% auto;
     width : 80vw;
-    height: 400px;
+    height: 40vh;
     background-color: #023047;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding : 3%;
-    cursor : se-resize;
-    /* position : relative; */
+    position : relative;
 }
 
 .resizer {
     width : 20x;
     height: 20px;
-    /* background-color: white; */
     color: #fefae0;
     position : absolute;
     /* font-weight : bold; */
@@ -115,4 +113,12 @@ h1 {
 
 .buttonArrow:hover {
     border : none;
+}
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
