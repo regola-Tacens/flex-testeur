@@ -8,23 +8,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='./index.js' defer></script>
+    <script src='./drag_elements.js' defer></script>
     <title>Document</title>
 </head>
 <body>
     <main class="main" id="main">
         <div class="container" id="container">
-            <div id="box1">
-                <p class="box1__content"></p>
-            </div> 
+            <div id="box1"> </div> 
             <div id="box2"></div>
             <div id="box3"></div>
         </div>
         <div class="flexInputs">
+            <div class="resizer"> redimensionnes cette boite bleu pour voir l'effet flex </div>
             <form id="form1">
                 <h2>BOX 1</h2>
                     <label for="flexWidth">flexGrow :</label>
                     <input type="number" min="0" name="flexWidth" class="box1__input" >
+                    <!-- <button id="box1__upArrow" onClick="flexGrowIncrease(box1); return false;" class="buttonArrow">+</button>
+                    <button id="box1__downArrow" onClick="flexGrowDecrease(box1); return false;" class="buttonArrow">-</button> -->
                     <label for="flexShrink">flexShrink :</label>
+
                     <input type="number" min="0" name="flexShrink" class="box1__flexshrink" >
                     <label for="flexbasis">flex-basis :</label>
                     <input type="number" min="0" name="flexbasis" class="box1__flexbasis">
@@ -45,6 +48,7 @@
                     <label for="flexbasis">flex-basis :</label>
                     <input type="number" min="0" name="flexbasis" class="box3__flexbasis">
             </form>
+            
             <!-- <div class="Definition__flexgrow">  <h1>La propriété flex-grow</h1>
                 La propriété flex-grow permet de répartir l'espace disponible en « parts ».
                  Si, pour le premier élément, on indique flex-grow avec une valeur de 2 et, 

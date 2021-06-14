@@ -14,8 +14,27 @@ const box1__flexshrink = document.getElementsByClassName('box1__flexshrink')
 const box2__flexshrink = document.getElementsByClassName('box2__flexshrink')
 const box3__flexshrink = document.getElementsByClassName('box3__flexshrink')
 
+const box1__upArrow = document.getElementById('box1__upArrow')
+
 const container = document.getElementById('container')
 const form__form1 = document.getElementById('form1')
+
+ box1.style.flexGrow = "1"
+
+flexGrowIncrease =(box) => {
+    // console.log(parseInt(box1.style.flexGrow) + 1)
+    box.style.flexGrow = (parseInt(box.style.flexGrow) +1).toString()
+    reportwidth()
+   
+}
+
+flexGrowDecrease =(box) => {
+    // console.log(parseInt(box1.style.flexGrow) + 1)
+    box.style.flexGrow = (parseInt(box.style.flexGrow) -1).toString()
+    reportwidth()
+   
+}
+
 
 
 getInputValue = ()=> {
@@ -36,9 +55,9 @@ getInputValue = ()=> {
 
 form__form1.addEventListener('change', ()=>getInputValue())
 
-changeDisplay =()=> {
-    container.style.flexDirection = 'column'
-}
+// changeDisplay =()=> {
+//     container.style.flexDirection = 'column'
+// }
 
 reloadPage = () => window.location.reload();
 
@@ -48,11 +67,11 @@ function reportwidth() {
     box1.innerHTML = `<div>
     <div style="font-size:30px;"><strong>BOX 1</div></strong><br>
     width : ${box1.clientWidth} px <br><br>
-    flex-grow : ${box1__input[0].value || 1 }<br>
+    flex-grow : ${box1.style.flexGrow || 1 }<br>
     flex-shrink : ${box1__flexshrink[0].value || 1 }<br>
     flex-basis : ${box1__flexbasis[0].value || 0}px<br><br>
     <b>shorthand</b><br>
-    flex : ${box1__input[0].value || 1 } ${box1__flexshrink[0].value || 1 } ${box1__flexbasis[0].value || 0}px
+    flex : ${box1.style.flexGrow || 1 } ${box1__flexshrink[0].value || 1 } ${box1__flexbasis[0].value || 0}px
     </div>` ;
 
     box2.innerHTML = `<div>
@@ -83,3 +102,37 @@ window.onresize = reportwidth;
 window.onload = ()=> {
     reportwidth();
 }
+
+
+// /// resizer ///
+// var element = document.getElementById('container');
+// console.log(container)
+// //create box in bottom-left
+// var resizer = document.createElement('div');
+// resizer.style.width = '20px';
+// resizer.style.height = '20px';
+// resizer.style.background = 'red';
+// resizer.style.position = 'absolute';
+// resizer.style.right = 0;
+// resizer.style.bottom = 0;
+// resizer.style.cursor = 'se-resize';
+// //Append Child to Element
+// element.appendChild(resizer);
+// //box function onmousemove
+// resizer.addEventListener('mousedown', initResize, false);
+
+// //Window funtion mousemove & mouseup
+// function initResize(e) {
+//    window.addEventListener('mousemove', Resize, false);
+//    window.addEventListener('mouseup', stopResize, false);
+// }
+// //resize the element
+// function Resize(e) {
+//    element.style.width = (e.clientX - element.offsetLeft) + 'px';
+//    element.style.height = (e.clientY - element.offsetTop) + 'px';
+// }
+// //on mouseup remove windows functions mousemove & mouseup
+// function stopResize(e) {
+//     window.removeEventListener('mousemove', Resize, false);
+//     window.removeEventListener('mouseup', stopResize, false);
+// }
