@@ -1,6 +1,5 @@
 var element = document.getElementById('container');
 
-
 var resizer = document.createElement('div');
 resizer.style.width = '15px';
 resizer.style.height = '15px';

@@ -1,7 +1,7 @@
-const box = document.getElementsByClassName('box')
-const box__input = document.getElementsByClassName('box__input')
-const box__flexbasis = document.getElementsByClassName('box__flexbasis')
-const box__flexShrink = document.getElementsByClassName('box__flexshrink')
+const boxes = document.getElementsByClassName('box')
+const boxes__input = document.getElementsByClassName('box__input')
+const boxes__flexbasis = document.getElementsByClassName('box__flexbasis')
+const boxes__flexShrink = document.getElementsByClassName('box__flexshrink')
 
 const container = document.getElementById('container')
 const form__form1 = document.getElementById('form1')
@@ -17,10 +17,10 @@ flexGrowDecrease =(box) => {
 }
 
 getInputValue = ()=> {
-    for(i=0; i<box.length;i++){
-        box[i].style.flexGrow= box__input[i].value
-        box[i].style.flexShrink= box__flexShrink[i].value
-        box[i].style.flexBasis = box__flexbasis[i].value +'px'
+    for(i=0; i<boxes.length;i++){
+        boxes[i].style.flexGrow= boxes__input[i].value
+        boxes[i].style.flexShrink= boxes__flexShrink[i].value
+        boxes[i].style.flexBasis = boxes__flexbasis[i].value +'px'
     }
 
     reportwidth()
@@ -30,18 +30,17 @@ form__form1.addEventListener('change', ()=>getInputValue())
 
 function reportwidth() {
     
-    for(i=0; i<box.length;i++){
-        console.log(box[i])
-        box[i].innerHTML =`<div>
+    for(i=0; i<boxes.length;i++){
+        boxes[i].innerHTML =`<div>
         <div style="font-size:30px;"><strong>BOX ${i +1}</div></strong><br>
-        width : ${box[`${i}`].clientWidth} px<br><br>
-        flex-grow : ${box[`${i}`].style.flexGrow || 1 }<br>
-        flex-shrink : ${box[`${i}`].style.flexShrink || 1 }<br>
-        flex-basis : ${box[`${i}`].style.flexBasis || 0}<br><br>
+        width : ${boxes[`${i}`].clientWidth} px<br><br>
+        flex-grow : ${boxes[`${i}`].style.flexGrow || 1 }<br>
+        flex-shrink : ${boxes[`${i}`].style.flexShrink || 1 }<br>
+        flex-basis : ${boxes[`${i}`].style.flexBasis || 0}<br><br>
         <b>shorthand</b><br>
-        flex : ${box[`${i}`].style.flexGrow || 1 } 
-        ${box[`${i}`].style.flexShrink || 1 } 
-        ${box[`${i}`].style.flexBasis || 0}px
+        flex : ${boxes[`${i}`].style.flexGrow || 1 } 
+        ${boxes[`${i}`].style.flexShrink || 1 } 
+        ${boxes[`${i}`].style.flexBasis || 0}
         </div>`
     }
   }
